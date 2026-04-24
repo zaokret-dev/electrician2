@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -979,12 +980,10 @@ main { animation: fadeUp .4s ease both; }
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <a class="nav-cta" href="contact.html">📞 (312) 555-0192</a>
-      <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" id="menuBtn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <div class="mobile-nav">
+  <div class="mobile-nav" id="mobileNav">
     <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="gallery.html">Gallery</a>
@@ -1289,5 +1288,23 @@ main { animation: fadeUp .4s ease both; }
   </div>
 </footer>
 
+
+<script>
+function toggleMenu() {
+  var nav = document.getElementById('mobileNav');
+  if (nav.classList.contains('open')) {
+    nav.classList.remove('open');
+  } else {
+    nav.classList.add('open');
+  }
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.mobile-nav a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.getElementById('mobileNav').classList.remove('open');
+    });
+  });
+});
+</script>
 </body>
 </html>
