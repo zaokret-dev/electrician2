@@ -959,6 +959,39 @@ footer {
 main { animation: fadeUp .4s ease both; }
 
 </style>
+
+<style>
+/* Mobile touch fixes */
+.hamburger {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  z-index: 200;
+  position: relative;
+}
+.nav-cta {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+nav {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+@media (max-width: 600px) {
+  .blog-posts-grid { grid-template-columns: 1fr !important; }
+  .blog-posts-grid > div { grid-template-columns: 1fr !important; }
+  .blog-posts-grid > div img { width: 100% !important; height: 180px !important; }
+}
+</style>
+
+<style>
+@media (max-width: 768px) {
+  .logo { font-size: 20px; }
+  .logo-mark { width: 28px; height: 28px; font-size: 14px; }
+  .nav-inner { padding: 0 16px; }
+  .hamburger { margin-left: auto; flex-shrink: 0; }
+}
+</style>
 </head>
 <body>
 
