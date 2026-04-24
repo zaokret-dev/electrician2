@@ -6,1301 +6,501 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SparkPro Electric | Chicago's Trusted Electrician | 24/7 Emergency</title>
 <meta name="description" content="SparkPro Electric — licensed, bonded, and insured electricians serving Chicago. Panel upgrades, rewiring, EV chargers, smart home wiring. Free estimates. Call 24/7.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════════
-   SparkPro Electric — Shared Stylesheet
-   Bold · Light Blue · Dynamic
-═══════════════════════════════════════════ */
-
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600&display=swap');
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { overflow-x: hidden; }
+body { font-family: 'Outfit', sans-serif; background: #fff; color: #0A1628; overflow-x: hidden; width: 100%; }
 
 :root {
-  --blue-50:  #EFF8FF;
-  --blue-100: #DBEFFE;
-  --blue-200: #BAE0FD;
-  --blue-300: #7CC8FB;
-  --blue-400: #38AAF5;
-  --blue-500: #0E90E0;
-  --blue-600: #0272BE;
-  --blue-700: #035A99;
-  --blue-800: #074C7E;
-  --blue-900: #0C3F68;
-  --sky:      #38BDF8;
-  --electric: #00D4FF;
-  --white:    #FFFFFF;
-  --gray-50:  #F8FAFC;
-  --gray-100: #F1F5F9;
-  --gray-200: #E2E8F0;
-  --gray-400: #94A3B8;
-  --gray-600: #475569;
-  --gray-800: #1E293B;
-  --dark:     #0A1628;
-  --accent:   #FF6B2B;
-  --accent-l: #FF8C55;
+  --b5: #0E90E0;
+  --b6: #0272BE;
+  --b1: #DBEFFE;
+  --b0: #EFF8FF;
+  --sky: #38BDF8;
+  --dark: #0A1628;
+  --g6: #475569;
+  --g4: #94A3B8;
+  --g1: #F1F5F9;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Outfit', sans-serif;
-  background: var(--white);
-  color: var(--gray-800);
-  overflow-x: hidden;
-}
-
-/* ── UTILITY ── */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--blue-100);
-  color: var(--blue-700);
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  border-radius: 999px;
-  padding: 5px 14px;
-  margin-bottom: 18px;
-}
-.badge:before { content: '⚡'; font-size: 11px; }
-
-h1, h2, h3 {
-  font-family: 'Barlow Condensed', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .02em;
-}
-
-.section-header { text-align: center; margin-bottom: 60px; }
-
-h2 {
-  font-size: clamp(36px, 5vw, 60px);
-  font-weight: 900;
-  color: var(--dark);
-  line-height: .95;
-  margin-bottom: 16px;
-}
-h2 em {
-  font-style: normal;
-  color: var(--blue-500);
-  display: block;
-}
-.section-sub {
-  font-size: 17px;
-  color: var(--gray-600);
-  max-width: 540px;
-  margin: 0 auto;
-  line-height: 1.7;
-  font-weight: 400;
-}
-
-/* Buttons */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--blue-500);
-  color: var(--white);
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  border: none;
-  padding: 14px 32px;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background .2s, transform .15s, box-shadow .2s;
-  box-shadow: 0 4px 16px rgba(14,144,224,.25);
-}
-.btn-primary:hover {
-  background: var(--blue-600);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(14,144,224,.35);
-}
-
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  color: var(--blue-600);
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  border: 2px solid var(--blue-400);
-  padding: 12px 32px;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all .2s;
-}
-.btn-outline:hover {
-  background: var(--blue-500);
-  color: var(--white);
-  border-color: var(--blue-500);
-}
-
-.btn-white {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--white);
-  color: var(--blue-700);
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  border: none;
-  padding: 14px 32px;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all .2s;
-  box-shadow: 0 4px 16px rgba(0,0,0,.15);
-}
-.btn-white:hover {
-  background: var(--blue-50);
-  transform: translateY(-2px);
-}
-
-/* ── NAVIGATION ── */
+/* NAV */
 nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  background: rgba(255,255,255,.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--blue-100);
-  box-shadow: 0 2px 20px rgba(14,144,224,.08);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid var(--b1);
+  box-shadow: 0 2px 16px rgba(14,144,224,.08);
 }
 .nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px; padding: 0 24px;
 }
 .logo {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  color: var(--dark);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-size: 26px; font-weight: 900; text-transform: uppercase;
+  color: var(--dark); text-decoration: none;
+  display: flex; align-items: center; gap: 8px; flex-shrink: 0;
 }
 .logo-mark {
-  width: 36px; height: 36px;
-  background: linear-gradient(135deg, var(--blue-500), var(--sky));
+  width: 34px; height: 34px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--b5), var(--sky));
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  color: white;
-  box-shadow: 0 4px 12px rgba(14,144,224,.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; color: white;
 }
-.logo span { color: var(--blue-500); }
-
-.nav-links {
-  display: flex;
-  gap: 4px;
-  list-style: none;
-}
+.logo em { color: var(--b5); font-style: normal; }
+.nav-links { display: flex; gap: 2px; list-style: none; }
 .nav-links a {
-  display: block;
-  color: var(--gray-600);
-  text-decoration: none;
-  font-family: 'Outfit', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: color .2s, background .2s;
+  color: var(--g6); text-decoration: none; font-size: 13px; font-weight: 500;
+  padding: 7px 12px; border-radius: 6px; transition: all .2s;
 }
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--blue-600);
-  background: var(--blue-50);
+.nav-links a:hover, .nav-links a.active { color: var(--b6); background: var(--b0); }
+.nav-phone {
+  background: var(--b5); color: white;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700;
+  text-transform: uppercase; border: none; padding: 9px 18px;
+  border-radius: 6px; cursor: pointer; text-decoration: none; white-space: nowrap;
 }
-.nav-links a.active { font-weight: 600; }
-
-.nav-cta {
-  background: var(--blue-500);
-  color: var(--white);
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background .2s;
-  box-shadow: 0 4px 12px rgba(14,144,224,.25);
-}
-.nav-cta:hover { background: var(--blue-600); }
-
 .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer;
+  padding: 8px; flex-shrink: 0;
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent;
 }
-.hamburger span {
-  display: block;
-  width: 24px; height: 2.5px;
-  background: var(--blue-600);
-  border-radius: 2px;
-  transition: all .3s;
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--b6); border-radius: 2px; }
+.mob-nav {
+  display: none; position: fixed; top: 68px; left: 0; right: 0;
+  background: white; border-bottom: 2px solid var(--b1);
+  box-shadow: 0 8px 24px rgba(14,144,224,.1); z-index: 999;
+  padding: 16px 24px; flex-direction: column;
 }
+.mob-nav.open { display: flex; }
+.mob-nav a {
+  color: var(--g6); text-decoration: none; font-size: 16px; font-weight: 500;
+  padding: 13px 0; border-bottom: 1px solid var(--g1); display: block;
+  touch-action: manipulation;
+}
+.mob-nav a.active { color: var(--b6); }
 
-/* Mobile nav */
-.mobile-nav {
-  display: none;
-  position: fixed;
-  top: 68px; left: 0; right: 0;
-  background: white;
-  border-bottom: 2px solid var(--blue-200);
-  box-shadow: 0 8px 24px rgba(14,144,224,.12);
-  z-index: 99;
-  padding: 20px 32px;
-  flex-direction: column;
-  gap: 4px;
+/* HERO */
+.hero {
+  margin-top: 68px;
+  background: linear-gradient(160deg, #EFF8FF 0%, #DBEFFE 50%, #BAE0FD 100%);
+  padding: 64px 24px 48px;
+  position: relative; overflow: hidden;
 }
-.mobile-nav.open { display: flex; }
-.mobile-nav a {
-  color: var(--gray-600);
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--gray-100);
-  transition: color .2s;
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: white; color: var(--b6);
+  font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  border-radius: 999px; padding: 5px 14px; margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(14,144,224,.12);
 }
-.mobile-nav a:hover,
-.mobile-nav a.active { color: var(--blue-600); }
-
-/* ── PAGE HERO (inner pages) ── */
-.page-hero {
-  padding: 120px 0 64px;
-  background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-400) 50%, var(--sky) 100%);
-  position: relative;
-  overflow: hidden;
-}
-.page-hero:before {
-  content: '';
-  position: absolute; inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-.page-hero-content { position: relative; z-index: 1; }
-.breadcrumb {
-  font-size: 13px;
-  color: rgba(255,255,255,.7);
-  margin-bottom: 16px;
-  font-weight: 500;
-}
-.breadcrumb a { color: rgba(255,255,255,.7); text-decoration: none; }
-.breadcrumb a:hover { color: white; }
-.breadcrumb span { color: white; }
-.page-hero h1 {
-  font-size: clamp(48px, 7vw, 80px);
-  font-weight: 900;
-  color: white;
-  line-height: .95;
-  margin-bottom: 16px;
-}
-.page-hero h1 em { font-style: normal; color: var(--electric); }
-.page-hero p {
-  font-size: 18px;
-  color: rgba(255,255,255,.85);
-  max-width: 520px;
-  line-height: 1.6;
-}
-
-/* ── SECTIONS ── */
-.section { padding: 96px 0; }
-.section-light { background: var(--gray-50); }
-.section-blue {
-  background: linear-gradient(135deg, var(--blue-600), var(--blue-500));
-  position: relative;
-  overflow: hidden;
-}
-
-/* ── CTA BANNER ── */
-.cta-banner {
-  background: linear-gradient(135deg, var(--blue-700) 0%, var(--blue-500) 60%, var(--sky) 100%);
-  padding: 80px 0;
-  position: relative;
-  overflow: hidden;
-}
-.cta-banner:before {
-  content: '⚡';
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 220px;
-  opacity: .05;
-  line-height: 1;
-}
-.cta-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-.cta-inner h2 { color: white; text-align: left; margin-bottom: 8px; }
-.cta-inner p { color: rgba(255,255,255,.8); font-size: 17px; }
-
-/* ── FOOTER ── */
-footer {
-  background: var(--dark);
-  padding: 64px 0 32px;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 48px;
-}
-.footer-brand p {
-  font-size: 14px;
-  color: var(--gray-400);
-  line-height: 1.7;
-  margin-top: 14px;
-  max-width: 280px;
-}
-.footer-logo {
+.hero h1 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 26px;
-  font-weight: 900;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  color: white;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-size: clamp(52px, 14vw, 96px);
+  font-weight: 900; text-transform: uppercase;
+  color: var(--dark); line-height: .92; margin-bottom: 20px;
 }
-.footer-logo span { color: var(--sky); }
-.footer-logo-mark {
-  width: 32px; height: 32px;
-  background: linear-gradient(135deg, var(--blue-500), var(--sky));
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
+.hero h1 em { color: var(--b5); font-style: normal; display: block; }
+.hero p {
+  font-size: 16px; color: var(--g6); line-height: 1.7;
+  max-width: 480px; margin-bottom: 32px;
 }
-.footer-col h4 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--sky);
-  margin-bottom: 16px;
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--b5); color: white;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700;
+  text-transform: uppercase; border: none; padding: 14px 28px;
+  border-radius: 4px; cursor: pointer; text-decoration: none;
+  box-shadow: 0 4px 16px rgba(14,144,224,.3);
 }
-.footer-col ul { list-style: none; }
-.footer-col ul li { margin-bottom: 10px; }
-.footer-col ul a {
-  font-size: 14px;
-  color: var(--gray-400);
-  text-decoration: none;
-  transition: color .2s;
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--b6);
+  font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700;
+  text-transform: uppercase; border: 2px solid var(--b5); padding: 12px 28px;
+  border-radius: 4px; cursor: pointer; text-decoration: none;
 }
-.footer-col ul a:hover { color: white; }
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.08);
-  padding-top: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+.hero-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+  background: white; border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(14,144,224,.1);
+  overflow: hidden; max-width: 400px;
 }
-.footer-bottom p { font-size: 13px; color: var(--gray-400); }
-.footer-license { color: var(--sky) !important; font-size: 12px !important; }
+.hero-stat { padding: 20px 16px; text-align: center; border-right: 1px solid var(--b1); }
+.hero-stat:last-child { border-right: none; }
+.hero-stat-num {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 38px; font-weight: 900;
+  color: var(--b5); line-height: 1;
+}
+.hero-stat-label { font-size: 11px; color: var(--g6); font-weight: 500; margin-top: 3px; }
 
-/* ── CARDS ── */
-.service-card {
-  background: white;
-  border: 1px solid var(--blue-100);
-  border-radius: 12px;
-  padding: 36px 28px;
-  transition: all .25s;
-  position: relative;
-  overflow: hidden;
+/* HERO IMAGE - only on desktop */
+.hero-img-wrap { display: none; }
+
+/* TICKER */
+.ticker { background: linear-gradient(90deg, var(--b6), var(--b5)); overflow: hidden; padding: 13px 0; }
+.ticker-track { display: flex; animation: tick 35s linear infinite; white-space: nowrap; }
+.ticker-item {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: white;
+  padding: 0 32px; display: inline-flex; align-items: center; gap: 12px;
 }
-.service-card:before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--blue-500), var(--sky));
-  transform: scaleX(0);
-  transition: transform .3s;
-  transform-origin: left;
+.ticker-item:after { content: '✦'; opacity: .4; }
+@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* SECTIONS */
+.section { padding: 80px 24px; }
+.section-gray { background: var(--g1); }
+.section-title { text-align: center; margin-bottom: 52px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--b1); color: var(--b6);
+  font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  border-radius: 999px; padding: 5px 14px; margin-bottom: 14px;
 }
-.service-card:hover {
-  border-color: var(--blue-200);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(14,144,224,.12);
+.badge:before { content: '⚡'; font-size: 10px; }
+h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(32px, 6vw, 56px); font-weight: 900; text-transform: uppercase;
+  color: var(--dark); line-height: .95; margin-bottom: 14px;
 }
-.service-card:hover:before { transform: scaleX(1); }
-.service-icon {
-  width: 56px; height: 56px;
-  background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
+h2 em { color: var(--b5); font-style: normal; display: block; }
+.section-sub { font-size: 16px; color: var(--g6); line-height: 1.7; max-width: 500px; margin: 0 auto; }
+
+/* SERVICE CARDS */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.card {
+  background: white; border: 1px solid var(--b1); border-radius: 12px;
+  padding: 32px 24px; transition: all .25s; position: relative; overflow: hidden;
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--b5), var(--sky));
+  transform: scaleX(0); transition: transform .3s; transform-origin: left;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(14,144,224,.1); }
+.card:hover::before { transform: scaleX(1); }
+.card-icon {
+  width: 52px; height: 52px; background: var(--b1); border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; margin-bottom: 18px;
+}
+.card h3 {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800;
+  text-transform: uppercase; color: var(--dark); margin-bottom: 8px;
+}
+.card p { font-size: 14px; color: var(--g6); line-height: 1.7; }
+
+/* PROCESS */
+.process-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 32px; }
+.step { text-align: center; padding: 0 12px; }
+.step-num {
+  width: 60px; height: 60px; margin: 0 auto 16px;
+  background: linear-gradient(135deg, var(--b5), var(--sky));
   border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  margin-bottom: 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 900; color: white;
+  box-shadow: 0 8px 20px rgba(14,144,224,.3);
 }
-.service-card h3 {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--dark);
-  margin-bottom: 10px;
+.step h3 {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 800;
+  text-transform: uppercase; color: var(--dark); margin-bottom: 8px;
 }
-.service-card p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+.step p { font-size: 13px; color: var(--g6); line-height: 1.65; }
 
-/* Review cards */
-.review-card {
-  background: white;
-  border: 1px solid var(--blue-100);
-  border-radius: 12px;
-  padding: 28px;
-  position: relative;
-  transition: box-shadow .25s;
+/* REVIEWS */
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.review {
+  background: white; border: 1px solid var(--b1); border-radius: 12px; padding: 24px;
 }
-.review-card:hover { box-shadow: 0 8px 32px rgba(14,144,224,.1); }
-.stars { color: #F59E0B; font-size: 15px; margin-bottom: 12px; letter-spacing: 2px; }
-.review-text { font-size: 14px; color: var(--gray-600); line-height: 1.75; margin-bottom: 20px; }
-.review-author { display: flex; align-items: center; gap: 12px; }
-.review-avatar {
-  width: 42px; height: 42px;
-  background: linear-gradient(135deg, var(--blue-500), var(--sky));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  color: white;
+.stars { color: #F59E0B; font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+.review p { font-size: 14px; color: var(--g6); line-height: 1.75; margin-bottom: 18px; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--b5), var(--sky));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; color: white;
   flex-shrink: 0;
 }
-.review-name { font-weight: 600; font-size: 14px; color: var(--dark); }
-.review-loc { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+.reviewer-name { font-weight: 600; font-size: 14px; color: var(--dark); }
+.reviewer-loc { font-size: 12px; color: var(--g4); margin-top: 1px; }
 
-/* Blog cards */
+/* BLOG */
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
 .blog-card {
-  background: white;
-  border: 1px solid var(--blue-100);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all .25s;
-  text-decoration: none;
-  display: block;
+  background: white; border: 1px solid var(--b1); border-radius: 12px;
+  overflow: hidden; text-decoration: none; display: block; transition: all .25s;
 }
-.blog-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(14,144,224,.12);
-  border-color: var(--blue-200);
-}
-.blog-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  transition: transform .4s;
-}
-.blog-card:hover img { transform: scale(1.04); }
-.blog-body { padding: 22px; }
+.blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(14,144,224,.1); }
+.blog-card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+.blog-body { padding: 20px; }
 .blog-tag {
-  display: inline-block;
-  background: var(--blue-100);
-  color: var(--blue-700);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  border-radius: 999px;
-  padding: 3px 10px;
-  margin-bottom: 10px;
+  display: inline-block; background: var(--b1); color: var(--b6);
+  font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  border-radius: 999px; padding: 3px 10px; margin-bottom: 8px;
 }
 .blog-card h3 {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--dark);
-  line-height: 1.2;
-  margin-bottom: 10px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 800;
+  text-transform: uppercase; color: var(--dark); line-height: 1.2; margin-bottom: 8px;
 }
-.blog-card p { font-size: 13px; color: var(--gray-600); line-height: 1.65; margin-bottom: 14px; }
-.blog-meta { font-size: 12px; color: var(--gray-400); display: flex; gap: 16px; font-weight: 500; }
+.blog-card p { font-size: 13px; color: var(--g6); line-height: 1.6; margin-bottom: 12px; }
+.blog-meta { font-size: 11px; color: var(--g4); display: flex; gap: 14px; }
 
-/* Stats */
-.stat-num {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 52px;
-  font-weight: 900;
-  color: var(--blue-500);
-  line-height: 1;
+/* CTA BANNER */
+.cta { background: linear-gradient(135deg, #074C7E, var(--b5), var(--sky)); padding: 72px 24px; text-align: center; }
+.cta h2 { color: white; margin-bottom: 12px; }
+.cta p { color: rgba(255,255,255,.8); font-size: 16px; margin-bottom: 32px; }
+.btn-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white; color: var(--b6);
+  font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700;
+  text-transform: uppercase; border: none; padding: 14px 32px;
+  border-radius: 4px; cursor: pointer; text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,.15);
 }
-.stat-label {
-  font-size: 13px;
-  color: var(--gray-600);
-  font-weight: 500;
-  margin-top: 4px;
-}
-
-/* Process steps */
-.step-num {
-  width: 64px; height: 64px;
-  background: linear-gradient(135deg, var(--blue-500), var(--sky));
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 28px;
-  font-weight: 900;
-  color: white;
-  margin: 0 auto 20px;
-  box-shadow: 0 8px 20px rgba(14,144,224,.3);
-  transition: transform .25s;
-}
-.process-step:hover .step-num { transform: scale(1.08); }
-.process-step h3 {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--dark);
-  margin-bottom: 10px;
-  text-align: center;
-}
-.process-step p { font-size: 14px; color: var(--gray-600); line-height: 1.65; text-align: center; }
-
-/* Gallery */
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.gallery-item img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .4s;
-}
-.gallery-item:hover img { transform: scale(1.06); }
-.gallery-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(2,114,190,.85) 0%, transparent 55%);
-  opacity: 0;
-  transition: opacity .3s;
-  display: flex;
-  align-items: flex-end;
-  padding: 20px;
-}
-.gallery-item:hover .gallery-overlay { opacity: 1; }
-.gallery-caption {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: white;
+.center { text-align: center; margin-top: 36px; }
+.btn-outline-blue {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--b6);
+  font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700;
+  text-transform: uppercase; border: 2px solid var(--b5); padding: 11px 24px;
+  border-radius: 4px; cursor: pointer; text-decoration: none;
 }
 
-/* FAQ */
-.faq-item {
-  border-bottom: 1px solid var(--blue-100);
-  overflow: hidden;
+/* FOOTER */
+footer { background: var(--dark); padding: 56px 24px 28px; }
+.footer-grid {
+  display: grid; gap: 36px; margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 }
-.faq-q {
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 24px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+.footer-logo {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 900;
+  text-transform: uppercase; color: white; text-decoration: none;
+  display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
 }
-.faq-q-text {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--dark);
+.footer-logo em { color: var(--sky); font-style: normal; }
+.footer-logo-mark {
+  width: 30px; height: 30px; background: linear-gradient(135deg, var(--b5), var(--sky));
+  border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 15px;
 }
-.faq-icon {
-  width: 30px; height: 30px;
-  background: var(--blue-100);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blue-600);
-  font-size: 20px;
-  font-weight: 700;
-  flex-shrink: 0;
-  transition: all .2s;
-  font-family: monospace;
-  line-height: 1;
+.footer-desc { font-size: 13px; color: var(--g4); line-height: 1.7; }
+.footer-col h4 {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--sky); margin-bottom: 14px;
 }
-.faq-item.open .faq-icon {
-  background: var(--blue-500);
-  color: white;
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul a { font-size: 13px; color: var(--g4); text-decoration: none; }
+.footer-col ul a:hover { color: white; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08); padding-top: 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 10px;
 }
-.faq-a {
-  font-size: 15px;
-  color: var(--gray-600);
-  line-height: 1.8;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .35s ease, padding .35s;
-}
-.faq-item.open .faq-a { max-height: 300px; padding-bottom: 24px; }
+.footer-bottom p { font-size: 12px; color: var(--g4); }
+.footer-emergency { color: var(--sky) !important; }
 
-/* Shop */
-.shop-card {
-  background: white;
-  border: 1px solid var(--blue-100);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all .25s;
+/* DESKTOP HERO IMAGE */
+@media (min-width: 900px) {
+  .hero { padding: 80px 0; }
+  .hero-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .hero-img-wrap { display: block; position: relative; }
+  .hero-img-wrap img { width: 100%; height: 500px; object-fit: cover; border-radius: 20px; box-shadow: 0 32px 80px rgba(14,144,224,.2); display: block; }
+  .hero-img-badge { position: absolute; bottom: -20px; left: -20px; background: white; border-radius: 12px; padding: 16px 20px; box-shadow: 0 8px 32px rgba(14,144,224,.15); text-align: center; }
+  .hero-img-badge strong { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 900; color: var(--b6); line-height: 1; }
+  .hero-img-badge span { font-size: 11px; color: var(--g6); }
+  .section { padding: 96px 32px; }
+  .cta { padding: 80px 32px; }
+  .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; text-align: left; }
+  .cta-inner h2 { margin-bottom: 8px; }
+  .cta-inner p { margin-bottom: 0; }
 }
-.shop-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(14,144,224,.12);
-}
-.shop-card img {
-  width: 100%; height: 200px;
-  object-fit: cover;
-  display: block;
-}
-.shop-body { padding: 20px; }
-.shop-body h3 {
-  font-size: 19px;
-  font-weight: 800;
-  color: var(--dark);
-  margin-bottom: 6px;
-}
-.shop-body p { font-size: 13px; color: var(--gray-600); line-height: 1.6; margin-bottom: 16px; }
-.shop-footer { display: flex; justify-content: space-between; align-items: center; }
-.shop-price {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 28px;
-  font-weight: 900;
-  color: var(--blue-600);
-}
-.btn-shop {
-  background: var(--blue-500);
-  color: white;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 6px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background .2s;
-}
-.btn-shop:hover { background: var(--blue-600); }
-
-/* Contact form */
-.contact-form-wrap {
-  background: var(--gray-50);
-  border: 1px solid var(--blue-100);
-  border-radius: 16px;
-  padding: 44px;
-}
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.form-group { margin-bottom: 20px; }
-.form-group label {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--gray-600);
-  margin-bottom: 8px;
-}
-.form-group input,
-.form-group textarea,
-.form-group select {
-  width: 100%;
-  background: white;
-  border: 1.5px solid var(--blue-200);
-  color: var(--dark);
-  font-family: 'Outfit', sans-serif;
-  font-size: 15px;
-  padding: 12px 16px;
-  border-radius: 8px;
-  transition: border-color .2s, box-shadow .2s;
-  outline: none;
-  appearance: none;
-}
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-  border-color: var(--blue-500);
-  box-shadow: 0 0 0 3px rgba(14,144,224,.1);
-}
-.form-group textarea { resize: vertical; min-height: 120px; }
-.form-success {
-  background: var(--blue-50);
-  border: 1.5px solid var(--blue-400);
-  color: var(--blue-700);
-  padding: 16px 20px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-  display: none;
-  margin-top: 16px;
-}
-
-/* About */
-.about-img-wrap { position: relative; }
-.about-img-wrap img {
-  width: 100%; height: 480px;
-  object-fit: cover;
-  border-radius: 16px;
-  display: block;
-}
-.about-img-badge {
-  position: absolute;
-  bottom: -20px; right: -20px;
-  background: white;
-  border: 1px solid var(--blue-100);
-  border-radius: 12px;
-  padding: 20px 24px;
-  box-shadow: 0 8px 32px rgba(14,144,224,.15);
-  text-align: center;
-}
-.about-img-badge strong {
-  display: block;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 40px;
-  font-weight: 900;
-  color: var(--blue-600);
-  line-height: 1;
-}
-.about-img-badge span { font-size: 12px; color: var(--gray-600); font-weight: 500; }
-
-.about-list { list-style: none; margin: 24px 0; }
-.about-list li {
-  font-size: 15px;
-  color: var(--gray-600);
-  padding: 10px 0;
-  border-bottom: 1px solid var(--gray-100);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.about-list li:before {
-  content: '';
-  width: 20px; height: 20px;
-  background: var(--blue-100);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l2 2 4-4' stroke='%230E90E0' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-size: contain;
-}
-
-/* Team */
-.team-card { text-align: center; }
-.team-img {
-  width: 130px; height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
-  box-shadow: 0 8px 24px rgba(14,144,224,.15);
-  margin: 0 auto 16px;
-  display: block;
-  transition: transform .25s, box-shadow .25s;
-}
-.team-card:hover .team-img {
-  transform: scale(1.05);
-  box-shadow: 0 12px 32px rgba(14,144,224,.25);
-}
-.team-card h3 {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--dark);
-  margin-bottom: 4px;
-}
-.team-card p { font-size: 13px; color: var(--blue-600); font-weight: 600; }
-
-/* Ticker */
-.ticker {
-  background: linear-gradient(90deg, var(--blue-600), var(--blue-500));
-  overflow: hidden;
-  padding: 14px 0;
-}
-.ticker-inner {
-  display: flex;
-  animation: ticker 35s linear infinite;
-  white-space: nowrap;
-}
-.ticker-item {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: white;
-  padding: 0 36px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  opacity: .9;
-}
-.ticker-item:after { content: '✦'; opacity: .5; }
-@keyframes ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* Grids */
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
-.grid-2-1 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-
-/* Gallery grid */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-.gallery-item { aspect-ratio: 4/3; }
-.gallery-item.wide {
-  grid-column: span 2;
-  aspect-ratio: 16/7;
-}
-
-/* Ratings */
-.big-rating-num {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 88px;
-  font-weight: 900;
-  color: var(--blue-600);
-  line-height: 1;
-}
-.rating-bar-track { flex: 1; height: 8px; background: var(--blue-100); border-radius: 4px; overflow: hidden; }
-.rating-bar-fill { height: 100%; background: linear-gradient(90deg, var(--blue-500), var(--sky)); border-radius: 4px; }
-
-/* Prose */
-.prose h3 {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--blue-600);
-  margin: 36px 0 12px;
-}
-.prose p { font-size: 15px; color: var(--gray-600); line-height: 1.85; margin-bottom: 16px; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .nav-links, .nav-cta { display: none; }
+@media (max-width: 899px) {
+  .hero-inner { padding: 0; }
+  .nav-links, .nav-phone { display: none; }
   .hamburger { display: flex; }
-  .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
-  .grid-2, .grid-2-1 { grid-template-columns: 1fr; gap: 40px; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-item.wide { grid-column: span 1; aspect-ratio: 4/3; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .cta-inner { flex-direction: column; text-align: center; }
-  .cta-inner h2 { text-align: center; }
-  .form-row { grid-template-columns: 1fr; }
 }
-@media (max-width: 600px) {
-  .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr; }
-  .gallery-item.wide { grid-column: span 1; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .container { padding: 0 20px; }
-  .contact-form-wrap { padding: 28px 20px; }
-  .section { padding: 64px 0; }
-}
-
-/* Page load animation */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-main { animation: fadeUp .4s ease both; }
-
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="container">
-    <div class="nav-inner">
-      <a class="logo" href="index.html">
-        <div class="logo-mark">⚡</div>
-        Spark<span>Pro</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <a class="nav-cta" href="contact.html">📞 (312) 555-0192</a>
-      <button class="hamburger" id="menuBtn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="shop.html">Shop</a>
-    <a href="faq.html">FAQ</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="contact.html">Contact</a>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <div class="logo-mark">⚡</div>
+      Spark<em>Pro</em>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="nav-phone" href="contact.html">📞 (312) 555-0192</a>
+    <button class="hamburger" id="menuBtn" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
+<div class="mob-nav" id="mobileNav">
+  <a href="index.html" class="active">Home</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="blog.html">Blog</a>
+  <a href="shop.html">Shop</a>
+  <a href="faq.html">FAQ</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="contact.html">Contact</a>
+</div>
+
 <main>
 
-  <!-- HERO -->
-  <section style="padding-top:68px; background: linear-gradient(135deg, #EFF8FF 0%, #DBEFFE 40%, #BAE0FD 100%); min-height:calc(100vh - 68px); display:flex; align-items:center; position:relative; overflow:hidden;">
-    <!-- Background decoration -->
-    <div style="position:absolute; top:-100px; right:-100px; width:600px; height:600px; background:radial-gradient(circle, rgba(56,189,248,.2) 0%, transparent 70%); pointer-events:none;"></div>
-    <div style="position:absolute; bottom:-80px; left:-80px; width:400px; height:400px; background:radial-gradient(circle, rgba(14,144,224,.1) 0%, transparent 70%); pointer-events:none;"></div>
-
-    <div class="container" style="position:relative;z-index:1;">
-      <div class="grid-2-1" style="padding: 80px 0;">
-        <div>
-          <div class="badge">Chicago's #1 Electrician</div>
-          <h1 style="font-size:clamp(56px,8vw,96px); font-weight:900; color:var(--dark); line-height:.92; margin-bottom:24px;">
-            POWER YOUR<br>
-            <em style="color:var(--blue-500); font-style:normal;">WORLD.</em>
-          </h1>
-          <p style="font-size:18px; color:var(--gray-600); line-height:1.7; max-width:460px; margin-bottom:36px;">
-            Licensed, bonded, and ready around the clock. From emergency repairs to full rewires — SparkPro brings expert electrical work to every home and business in Chicago.
-          </p>
-          <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:56px;">
-            <a class="btn-primary" href="contact.html">⚡ Get Free Estimate</a>
-            <a class="btn-outline" href="about.html">About Us →</a>
-          </div>
-
-          <!-- Stats -->
-          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:32px; max-width:420px;">
-            <div>
-              <div class="stat-num">18+</div>
-              <div class="stat-label">Years in Chicago</div>
-            </div>
-            <div>
-              <div class="stat-num">3.4K+</div>
-              <div class="stat-label">Jobs Done</div>
-            </div>
-            <div>
-              <div class="stat-num">24/7</div>
-              <div class="stat-label">Emergency</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="position:relative;">
-          <div style="border-radius:20px; overflow:hidden; box-shadow:0 32px 80px rgba(14,144,224,.2);">
-            <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=800&q=80&auto=format&fit=crop" alt="SparkPro electrician at work" style="width:100%; height:520px; object-fit:cover; display:block;">
-          </div>
-          <!-- Floating badge -->
-          <div style="position:absolute; bottom:-24px; left:-24px; background:white; border-radius:14px; padding:20px 24px; box-shadow:0 12px 40px rgba(14,144,224,.18); border:1px solid var(--blue-100);">
-            <div style="font-family:'Barlow Condensed',sans-serif; font-size:38px; font-weight:900; color:var(--blue-600); line-height:1;">100%</div>
-            <div style="font-size:12px; color:var(--gray-600); font-weight:500; margin-top:2px;">Satisfaction Guaranteed</div>
-          </div>
-          <!-- Trust badge -->
-          <div style="position:absolute; top:24px; right:-16px; background:var(--blue-500); border-radius:10px; padding:12px 16px; box-shadow:0 8px 24px rgba(14,144,224,.3); color:white; text-align:center;">
-            <div style="font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:900;">⭐ 4.9</div>
-            <div style="font-size:10px; font-weight:500; opacity:.85; margin-top:2px;">312 Reviews</div>
-          </div>
-        </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">⚡ Chicago's #1 Electrician</div>
+      <h1>POWER YOUR<em>WORLD.</em></h1>
+      <p>Licensed, bonded, and ready around the clock. From emergency repairs to full rewires — SparkPro brings expert electrical work to every home and business in Chicago.</p>
+      <div class="hero-btns">
+        <a class="btn-primary" href="contact.html">⚡ Get Free Estimate</a>
+        <a class="btn-outline" href="about.html">About Us →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-num">18+</div><div class="hero-stat-label">Years in Chicago</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">3.4K+</div><div class="hero-stat-label">Jobs Done</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">24/7</div><div class="hero-stat-label">Emergency</div></div>
       </div>
     </div>
-  </section>
-
-  <!-- TICKER -->
-  <div class="ticker">
-    <div class="ticker-inner">
-      <div class="ticker-item">Emergency Electrical</div>
-      <div class="ticker-item">Panel Upgrades</div>
-      <div class="ticker-item">EV Charger Install</div>
-      <div class="ticker-item">Smart Home Wiring</div>
-      <div class="ticker-item">Commercial Projects</div>
-      <div class="ticker-item">Whole-Home Rewire</div>
-      <div class="ticker-item">Lighting Design</div>
-      <div class="ticker-item">Generator Install</div>
-      <div class="ticker-item">Emergency Electrical</div>
-      <div class="ticker-item">Panel Upgrades</div>
-      <div class="ticker-item">EV Charger Install</div>
-      <div class="ticker-item">Smart Home Wiring</div>
-      <div class="ticker-item">Commercial Projects</div>
-      <div class="ticker-item">Whole-Home Rewire</div>
-      <div class="ticker-item">Lighting Design</div>
-      <div class="ticker-item">Generator Install</div>
-    </div>
-  </div>
-
-  <!-- SERVICES -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="badge">What We Do</div>
-        <h2>COMPLETE ELECTRICAL SERVICES<br><em>FOR CHICAGO HOMES</em></h2>
-        <p class="section-sub">Licensed, bonded, and fully insured. We handle every electrical need — big or small.</p>
-      </div>
-      <div class="grid-3">
-        <div class="service-card">
-          <div class="service-icon">🚨</div>
-          <h3>Emergency Electrical</h3>
-          <p>Power outage, sparking outlet, or tripped breaker? We dispatch within 45 minutes, any hour, any day of the year.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">⚡</div>
-          <h3>Panel Upgrades</h3>
-          <p>Outdated 100A panel holding you back? We upgrade to 200A or 400A service with full permits and city inspection.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🔌</div>
-          <h3>Whole-Home Rewiring</h3>
-          <p>Old knob-and-tube or aluminum wiring is a fire hazard. We rewire safely with minimal disruption to your walls.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🚗</div>
-          <h3>EV Charger Install</h3>
-          <p>Level 2 home charging station installed correctly and to code. Fast, clean, and compatible with all major vehicles.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏠</div>
-          <h3>Smart Home Wiring</h3>
-          <p>Structured wiring for smart lighting, security cameras, audio, and automation. Future-proof your home today.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🔋</div>
-          <h3>Generator & Backup Power</h3>
-          <p>Whole-home standby generators or battery backup systems. Never lose power during a Chicago winter storm again.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-header">
-        <div class="badge">How It Works</div>
-        <h2>SIMPLE PROCESS,<br><em>PERFECT RESULTS</em></h2>
-      </div>
-      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:32px; position:relative;">
-        <div style="position:absolute; top:32px; left:12%; right:12%; height:2px; background:linear-gradient(90deg, var(--blue-200), var(--blue-400), var(--blue-200)); z-index:0;"></div>
-        <div class="process-step" style="position:relative;z-index:1;">
-          <div class="step-num">01</div>
-          <h3>Call or Text</h3>
-          <p>Reach us at (312) 555-0192 anytime. A real person answers — no voicemail, no bots.</p>
-        </div>
-        <div class="process-step" style="position:relative;z-index:1;">
-          <div class="step-num">02</div>
-          <h3>Free Estimate</h3>
-          <p>We arrive on time and give you a clear upfront price. No hidden fees, ever.</p>
-        </div>
-        <div class="process-step" style="position:relative;z-index:1;">
-          <div class="step-num">03</div>
-          <h3>We Get to Work</h3>
-          <p>Our licensed electricians complete the job cleanly, efficiently, and to code.</p>
-        </div>
-        <div class="process-step" style="position:relative;z-index:1;">
-          <div class="step-num">04</div>
-          <h3>Guaranteed</h3>
-          <p>Every job backed by our written guarantee. Not satisfied? We fix it free.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="badge">Customer Reviews</div>
-        <h2>WHAT CHICAGO HOMEOWNERS<br><em>SAY ABOUT US</em></h2>
-      </div>
-      <div class="grid-3">
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">Our power went out at midnight in January. SparkPro had a technician at our door in 40 minutes. Diagnosed and fixed in under an hour. Absolutely incredible service.</p>
-          <div class="review-author">
-            <div class="review-avatar">MP</div>
-            <div><div class="review-name">Maria Petrova</div><div class="review-loc">📍 Lincoln Park, IL</div></div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">Full panel upgrade and EV charger installed. Professional, clean, finished faster than quoted. Permit handled with zero issues. Will absolutely use again.</p>
-          <div class="review-author">
-            <div class="review-avatar">DC</div>
-            <div><div class="review-name">David Chen</div><div class="review-loc">📍 Wicker Park, IL</div></div>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">Rewired our 1920s bungalow. Meticulous about protecting original woodwork. Every outlet updated perfectly. Worth every single penny.</p>
-          <div class="review-author">
-            <div class="review-avatar">JR</div>
-            <div><div class="review-name">Jessica Rodriguez</div><div class="review-loc">📍 Hyde Park, IL</div></div>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:40px;">
-        <a class="btn-outline" href="reviews.html">All Reviews →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOG PREVIEW -->
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-header">
-        <div class="badge">Tips & News</div>
-        <h2>LATEST FROM<br><em>OUR BLOG</em></h2>
-      </div>
-      <div class="grid-3">
-        <a class="blog-card" href="blog.html">
-          <img src="https://images.unsplash.com/photo-1555963153-11ff60182d08?w=600&q=80&auto=format&fit=crop" alt="Rewiring warning signs">
-          <div class="blog-body">
-            <span class="blog-tag">Safety Tips</span>
-            <h3>7 Warning Signs Your Home Needs Rewiring Now</h3>
-            <p>Flickering lights and tripped breakers could mean your wiring is a serious fire risk.</p>
-            <div class="blog-meta"><span>📅 Mar 20, 2025</span><span>⏱ 5 min</span></div>
-          </div>
-        </a>
-        <a class="blog-card" href="blog.html">
-          <img src="https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?w=600&q=80&auto=format&fit=crop" alt="EV charger">
-          <div class="blog-body">
-            <span class="blog-tag">EV Charging</span>
-            <h3>Level 1 vs Level 2 Home Charger: Which Is Right?</h3>
-            <p>Not all home EV chargers are equal. Here's what to know before you upgrade.</p>
-            <div class="blog-meta"><span>📅 Feb 14, 2025</span><span>⏱ 4 min</span></div>
-          </div>
-        </a>
-        <a class="blog-card" href="blog.html">
-          <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&q=80&auto=format&fit=crop" alt="Smart home">
-          <div class="blog-body">
-            <span class="blog-tag">Smart Home</span>
-            <h3>How to Future-Proof Your Electrical System in 2025</h3>
-            <p>Smart panels, structured wiring, and load management for Chicago homeowners.</p>
-            <div class="blog-meta"><span>📅 Jan 8, 2025</span><span>⏱ 6 min</span></div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta-banner">
-    <div class="container">
-      <div class="cta-inner">
-        <div>
-          <h2>ELECTRICAL PROBLEM?<br>WE CAN HELP.</h2>
-          <p>Call Chicago's most trusted electrician — fast response, upfront pricing, 100% guaranteed.</p>
-        </div>
-        <a class="btn-white" href="contact.html">📞 Call (312) 555-0192</a>
+    <div class="hero-img-wrap">
+      <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=800&q=80&auto=format&fit=crop" alt="SparkPro electrician">
+      <div class="hero-img-badge">
+        <strong>100%</strong>
+        <span>Satisfaction Guaranteed</span>
       </div>
     </div>
   </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <div class="ticker-item">Emergency Electrical</div><div class="ticker-item">Panel Upgrades</div>
+    <div class="ticker-item">EV Charger Install</div><div class="ticker-item">Smart Home Wiring</div>
+    <div class="ticker-item">Commercial Projects</div><div class="ticker-item">Whole-Home Rewire</div>
+    <div class="ticker-item">Lighting Design</div><div class="ticker-item">Generator Install</div>
+    <div class="ticker-item">Emergency Electrical</div><div class="ticker-item">Panel Upgrades</div>
+    <div class="ticker-item">EV Charger Install</div><div class="ticker-item">Smart Home Wiring</div>
+    <div class="ticker-item">Commercial Projects</div><div class="ticker-item">Whole-Home Rewire</div>
+    <div class="ticker-item">Lighting Design</div><div class="ticker-item">Generator Install</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="section-title">
+    <div class="badge">What We Do</div>
+    <h2>COMPLETE ELECTRICAL SERVICES<em>FOR CHICAGO HOMES</em></h2>
+    <p class="section-sub">Licensed, bonded, and fully insured. We handle every electrical need — big or small.</p>
+  </div>
+  <div class="cards-grid">
+    <div class="card"><div class="card-icon">🚨</div><h3>Emergency Electrical</h3><p>Power outage, sparking outlet, or tripped breaker? We dispatch within 45 minutes, any hour, any day.</p></div>
+    <div class="card"><div class="card-icon">⚡</div><h3>Panel Upgrades</h3><p>Outdated 100A panel holding you back? We upgrade to 200A or 400A with full permits and city inspection.</p></div>
+    <div class="card"><div class="card-icon">🔌</div><h3>Whole-Home Rewiring</h3><p>Old knob-and-tube or aluminum wiring is a fire hazard. We rewire safely with minimal disruption.</p></div>
+    <div class="card"><div class="card-icon">🚗</div><h3>EV Charger Install</h3><p>Level 2 home charging station installed correctly and to code. Compatible with all major vehicles.</p></div>
+    <div class="card"><div class="card-icon">🏠</div><h3>Smart Home Wiring</h3><p>Structured wiring for smart lighting, cameras, audio, and automation. Future-proof your home.</p></div>
+    <div class="card"><div class="card-icon">🔋</div><h3>Generator & Backup Power</h3><p>Whole-home standby generators or battery backup. Never lose power during a Chicago storm again.</p></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section-gray">
+  <div class="section-title">
+    <div class="badge">How It Works</div>
+    <h2>SIMPLE PROCESS,<em>PERFECT RESULTS</em></h2>
+  </div>
+  <div class="process-grid">
+    <div class="step"><div class="step-num">01</div><h3>Call or Text</h3><p>Reach us at (312) 555-0192 anytime. A real person answers — no voicemail, no bots.</p></div>
+    <div class="step"><div class="step-num">02</div><h3>Free Estimate</h3><p>We arrive on time and give you a clear upfront price. No hidden fees, ever.</p></div>
+    <div class="step"><div class="step-num">03</div><h3>We Get to Work</h3><p>Our licensed electricians complete the job cleanly, efficiently, and to code.</p></div>
+    <div class="step"><div class="step-num">04</div><h3>Guaranteed</h3><p>Every job backed by our written guarantee. Not satisfied? We fix it free.</p></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section">
+  <div class="section-title">
+    <div class="badge">Customer Reviews</div>
+    <h2>WHAT CHICAGO HOMEOWNERS<em>SAY ABOUT US</em></h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review"><div class="stars">★★★★★</div><p>Our power went out at midnight in January. SparkPro had a technician at our door in 40 minutes. Diagnosed and fixed in under an hour. Absolutely incredible service.</p><div class="reviewer"><div class="avatar">MP</div><div><div class="reviewer-name">Maria Petrova</div><div class="reviewer-loc">📍 Lincoln Park, IL</div></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>Full panel upgrade and EV charger installed. Professional, clean, finished faster than quoted. Permit handled with zero issues. Will absolutely use again.</p><div class="reviewer"><div class="avatar">DC</div><div><div class="reviewer-name">David Chen</div><div class="reviewer-loc">📍 Wicker Park, IL</div></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>Rewired our 1920s bungalow. Meticulous about protecting original woodwork. Every outlet updated perfectly. Worth every single penny.</p><div class="reviewer"><div class="avatar">JR</div><div><div class="reviewer-name">Jessica Rodriguez</div><div class="reviewer-loc">📍 Hyde Park, IL</div></div></div></div>
+  </div>
+  <div class="center"><a class="btn-outline-blue" href="reviews.html">All Reviews →</a></div>
+</section>
+
+<!-- BLOG -->
+<section class="section section-gray">
+  <div class="section-title">
+    <div class="badge">Tips & News</div>
+    <h2>LATEST FROM<em>OUR BLOG</em></h2>
+  </div>
+  <div class="blog-grid">
+    <a class="blog-card" href="blog.html"><img src="https://images.unsplash.com/photo-1555963153-11ff60182d08?w=600&q=80&auto=format&fit=crop" alt="Rewiring"><div class="blog-body"><span class="blog-tag">Safety Tips</span><h3>7 Warning Signs Your Home Needs Rewiring Now</h3><p>Flickering lights and tripped breakers could mean your wiring is a serious fire risk.</p><div class="blog-meta"><span>📅 Mar 20, 2025</span><span>⏱ 5 min</span></div></div></a>
+    <a class="blog-card" href="blog.html"><img src="https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?w=600&q=80&auto=format&fit=crop" alt="EV"><div class="blog-body"><span class="blog-tag">EV Charging</span><h3>Level 1 vs Level 2 Home Charger: Which Is Right?</h3><p>Not all home EV chargers are equal. Here's what to know before you upgrade.</p><div class="blog-meta"><span>📅 Feb 14, 2025</span><span>⏱ 4 min</span></div></div></a>
+    <a class="blog-card" href="blog.html"><img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&q=80&auto=format&fit=crop" alt="Smart"><div class="blog-body"><span class="blog-tag">Smart Home</span><h3>How to Future-Proof Your Electrical System in 2025</h3><p>Smart panels and load management for Chicago homeowners.</p><div class="blog-meta"><span>📅 Jan 8, 2025</span><span>⏱ 6 min</span></div></div></a>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <div class="cta-inner">
+    <div>
+      <h2>ELECTRICAL PROBLEM?<em style="display:inline;color:rgba(255,255,255,.7)"> WE CAN HELP.</em></h2>
+      <p>Call Chicago's most trusted electrician — fast response, upfront pricing, 100% guaranteed.</p>
+    </div>
+    <a class="btn-white" href="contact.html">📞 Call (312) 555-0192</a>
+  </div>
+</div>
 
 </main>
 
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="footer-logo" href="index.html"><div class="footer-logo-mark">⚡</div>Spark<span>Pro</span></a>
-        <p>Professional electrical services in Chicago, IL. Trusted by over 3,400 homeowners and businesses since 2007.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="index.html">Emergency Electrical</a></li>
-          <li><a href="index.html">Panel Upgrades</a></li>
-          <li><a href="index.html">EV Charger Install</a></li>
-          <li><a href="index.html">Smart Home Wiring</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="shop.html">Shop</a></li>
-        </ul>
-      </div>
+  <div class="footer-grid">
+    <div>
+      <a class="footer-logo" href="index.html"><div class="footer-logo-mark">⚡</div>Spark<em>Pro</em></a>
+      <p class="footer-desc">Professional electrical services in Chicago, IL. Trusted by over 3,400 homeowners and businesses since 2007.</p>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 SparkPro Electric. All rights reserved. License #EC-114892 | Chicago, IL</p>
-      <p class="footer-license">⚡ 24/7 Emergency: (312) 555-0192</p>
-    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="index.html">Emergency Electrical</a></li><li><a href="index.html">Panel Upgrades</a></li><li><a href="index.html">EV Charger Install</a></li><li><a href="index.html">Smart Home Wiring</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="contact.html">Contact</a></li><li><a href="shop.html">Shop</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 SparkPro Electric. All rights reserved. License #EC-114892 | Chicago, IL</p>
+    <p class="footer-emergency">⚡ 24/7 Emergency: (312) 555-0192</p>
   </div>
 </footer>
 
-
 <script>
 function toggleMenu() {
-  var nav = document.getElementById('mobileNav');
-  if (nav.classList.contains('open')) {
-    nav.classList.remove('open');
-  } else {
-    nav.classList.add('open');
-  }
+  var n = document.getElementById('mobileNav');
+  n.classList.contains('open') ? n.classList.remove('open') : n.classList.add('open');
 }
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.mobile-nav a').forEach(function(link) {
-    link.addEventListener('click', function() {
+  document.querySelectorAll('.mob-nav a').forEach(function(a) {
+    a.addEventListener('click', function() {
       document.getElementById('mobileNav').classList.remove('open');
     });
   });
