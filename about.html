@@ -6,118 +6,131 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About SparkPro Electric | Licensed Chicago Electricians Since 2007</title>
 <meta name="description" content="Learn about SparkPro Electric — Chicago's trusted electrician since 2007. Family owned, locally operated. Meet our licensed team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600&display=swap');
-:root{--blue-50:#EFF8FF;--blue-100:#DBEFFE;--blue-200:#BAE0FD;--blue-400:#38AAF5;--blue-500:#0E90E0;--blue-600:#0272BE;--blue-700:#035A99;--sky:#38BDF8;--electric:#00D4FF;--white:#FFFFFF;--gray-50:#F8FAFC;--gray-100:#F1F5F9;--gray-400:#94A3B8;--gray-600:#475569;--dark:#0A1628}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden}
-.container{max-width:1200px;margin:0 auto;padding:0 32px}
-h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em}
-h2{font-size:clamp(36px,5vw,60px);font-weight:900;color:var(--dark);line-height:.95;margin-bottom:16px}
-h2 em{font-style:normal;color:var(--blue-500);display:block}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { overflow-x: hidden; }
+body { font-family: 'Outfit', sans-serif; background: #fff; color: #0A1628; overflow-x: hidden; width: 100%; }
+
+:root {
+  --b5: #0E90E0; --b6: #0272BE; --b1: #DBEFFE; --b0: #EFF8FF;
+  --sky: #38BDF8; --electric: #00D4FF; --dark: #0A1628;
+  --g6: #475569; --g4: #94A3B8; --g1: #F1F5F9;
+}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);border-bottom:1px solid var(--blue-100);box-shadow:0 2px 20px rgba(14,144,224,.08)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;padding:0 32px;width:100%}
-.logo{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;color:var(--dark);text-decoration:none;display:flex;align-items:center;gap:10px;flex-shrink:0}
-.logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--blue-500),var(--sky));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;color:white;flex-shrink:0}
-.logo span{color:var(--blue-500)}
-.nav-links{display:flex;gap:4px;list-style:none}
-.nav-links a{display:block;color:var(--gray-600);text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px;border-radius:6px;transition:color .2s,background .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--blue-600);background:var(--blue-50)}
-.nav-cta{background:var(--blue-500);color:white;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;text-decoration:none;white-space:nowrap}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;touch-action:manipulation;-webkit-tap-highlight-color:transparent;flex-shrink:0}
-.hamburger span{display:block;width:24px;height:2.5px;background:var(--blue-600);border-radius:2px}
-.mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:white;border-bottom:2px solid var(--blue-200);box-shadow:0 8px 24px rgba(14,144,224,.12);z-index:999;padding:20px 32px;flex-direction:column}
-.mobile-nav.open{display:flex}
-.mobile-nav a{color:var(--gray-600);text-decoration:none;font-size:17px;font-weight:500;padding:14px 0;border-bottom:1px solid var(--gray-100);display:block;touch-action:manipulation}
-.mobile-nav a.active,.mobile-nav a:hover{color:var(--blue-600)}
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,.97); border-bottom: 1px solid var(--b1); box-shadow: 0 2px 16px rgba(14,144,224,.08); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; padding: 0 24px; }
+.logo { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 900; text-transform: uppercase; color: var(--dark); text-decoration: none; display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.logo-mark { width: 34px; height: 34px; flex-shrink: 0; background: linear-gradient(135deg, var(--b5), var(--sky)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 17px; color: white; }
+.logo em { color: var(--b5); font-style: normal; }
+.nav-links { display: flex; gap: 2px; list-style: none; }
+.nav-links a { color: var(--g6); text-decoration: none; font-size: 13px; font-weight: 500; padding: 7px 12px; border-radius: 6px; transition: all .2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--b6); background: var(--b0); }
+.nav-phone { background: var(--b5); color: white; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; border: none; padding: 9px 18px; border-radius: 6px; cursor: pointer; text-decoration: none; white-space: nowrap; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; flex-shrink: 0; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--b6); border-radius: 2px; }
+.mob-nav { display: none; position: fixed; top: 68px; left: 0; right: 0; background: white; border-bottom: 2px solid var(--b1); box-shadow: 0 8px 24px rgba(14,144,224,.1); z-index: 999; padding: 16px 24px; flex-direction: column; }
+.mob-nav.open { display: flex; }
+.mob-nav a { color: var(--g6); text-decoration: none; font-size: 16px; font-weight: 500; padding: 13px 0; border-bottom: 1px solid var(--g1); display: block; touch-action: manipulation; }
+.mob-nav a.active { color: var(--b6); }
 
 /* PAGE HERO */
-.page-hero{padding:132px 0 64px;background:linear-gradient(135deg,var(--blue-600) 0%,var(--blue-400) 50%,var(--sky) 100%);position:relative;overflow:hidden;width:100%;display:block;clear:both}
-.breadcrumb{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:16px;font-weight:500}
-.breadcrumb a{color:rgba(255,255,255,.7);text-decoration:none}
-.breadcrumb span{color:white}
-.page-hero h1{font-size:clamp(48px,7vw,80px);font-weight:900;color:white;line-height:.95;margin-bottom:16px}
-.page-hero h1 em{font-style:normal;color:var(--electric)}
-.page-hero p{font-size:18px;color:rgba(255,255,255,.85);max-width:520px;line-height:1.6}
+.page-hero { margin-top: 68px; background: linear-gradient(135deg, var(--b6) 0%, var(--b5) 50%, var(--sky) 100%); padding: 64px 24px 56px; width: 100%; }
+.breadcrumb { font-size: 13px; color: rgba(255,255,255,.7); margin-bottom: 14px; }
+.breadcrumb a { color: rgba(255,255,255,.7); text-decoration: none; }
+.breadcrumb span { color: white; }
+.page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(48px, 12vw, 80px); font-weight: 900; text-transform: uppercase; color: white; line-height: .92; margin-bottom: 14px; }
+.page-hero h1 em { font-style: normal; color: var(--electric); }
+.page-hero p { font-size: 17px; color: rgba(255,255,255,.85); max-width: 500px; line-height: 1.6; }
 
 /* SECTIONS */
-.section{padding:96px 0}
-.section-light{background:var(--gray-50)}
-.badge{display:inline-flex;align-items:center;gap:6px;background:var(--blue-100);color:var(--blue-700);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:5px 14px;margin-bottom:18px}
-.badge:before{content:'⚡';font-size:11px}
+.section { padding: 72px 24px; }
+.section-gray { background: var(--g1); }
+.badge { display: inline-flex; align-items: center; gap: 6px; background: var(--b1); color: var(--b6); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; border-radius: 999px; padding: 5px 14px; margin-bottom: 14px; }
+.badge:before { content: '⚡'; font-size: 10px; }
+h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(32px, 7vw, 56px); font-weight: 900; text-transform: uppercase; color: var(--dark); line-height: .95; margin-bottom: 14px; }
+h2 em { color: var(--b5); font-style: normal; display: block; }
+
+/* ABOUT STORY */
+.about-img { width: 100%; border-radius: 16px; display: block; object-fit: cover; height: 320px; margin-bottom: 16px; }
+.about-img-wrap { position: relative; margin-bottom: 36px; }
+.about-badge { position: absolute; bottom: -12px; right: 12px; background: white; border-radius: 10px; padding: 14px 18px; box-shadow: 0 8px 24px rgba(14,144,224,.15); text-align: center; }
+.about-badge strong { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 900; color: var(--b6); line-height: 1; }
+.about-badge span { font-size: 11px; color: var(--g6); }
+.about-text p { font-size: 15px; color: var(--g6); line-height: 1.8; margin-bottom: 14px; }
+.about-list { list-style: none; margin: 20px 0 28px; }
+.about-list li { font-size: 14px; color: var(--g6); padding: 9px 0; border-bottom: 1px solid var(--g1); display: flex; align-items: center; gap: 10px; }
+.about-list li:before { content: '✓'; width: 20px; height: 20px; min-width: 20px; background: var(--b1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--b6); font-weight: 700; font-size: 11px; text-align: center; line-height: 20px; }
 
 /* BUTTONS */
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue-500);color:white;font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;text-transform:uppercase;border:none;padding:14px 32px;border-radius:4px;cursor:pointer;text-decoration:none;box-shadow:0 4px 16px rgba(14,144,224,.25)}
-.btn-white{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--blue-700);font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;text-transform:uppercase;border:none;padding:14px 32px;border-radius:4px;cursor:pointer;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.15)}
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--b5); color: white; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; border: none; padding: 13px 28px; border-radius: 4px; cursor: pointer; text-decoration: none; box-shadow: 0 4px 16px rgba(14,144,224,.3); }
+.btn-white { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--b6); font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; border: none; padding: 13px 28px; border-radius: 4px; cursor: pointer; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,.15); }
 
-/* ABOUT LAYOUT */
-.grid-2-1{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-img-wrap{position:relative}
-.about-img-wrap img{width:100%;height:480px;object-fit:cover;border-radius:16px;display:block}
-.about-img-badge{position:absolute;bottom:-20px;right:0;background:white;border:1px solid var(--blue-100);border-radius:12px;padding:20px 24px;box-shadow:0 8px 32px rgba(14,144,224,.15);text-align:center}
-.about-img-badge strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;color:var(--blue-600);line-height:1}
-.about-img-badge span{font-size:12px;color:var(--gray-600);font-weight:500}
-.about-list{list-style:none;margin:24px 0}
-.about-list li{font-size:15px;color:var(--gray-600);padding:10px 0;border-bottom:1px solid var(--gray-100);display:flex;align-items:center;gap:12px}
-.about-list li:before{content:'✓';width:22px;height:22px;min-width:22px;background:var(--blue-100);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--blue-600);font-weight:700;font-size:12px}
+/* STATS BAND */
+.stats-band { background: linear-gradient(135deg, var(--b6), var(--b5)); padding: 48px 24px; }
+.stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; text-align: center; max-width: 600px; margin: 0 auto; }
+.stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 900; color: white; line-height: 1; }
+.stat-label { font-size: 12px; color: rgba(255,255,255,.75); margin-top: 3px; }
 
 /* CARDS */
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.service-card{background:white;border:1px solid var(--blue-100);border-radius:12px;padding:36px 28px;transition:all .25s}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(14,144,224,.12)}
-.service-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--blue-100),var(--blue-200));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px}
-.service-card h3{font-size:22px;font-weight:800;color:var(--dark);margin-bottom:10px}
-.service-card p{font-size:14px;color:var(--gray-600);line-height:1.7}
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.card { background: white; border: 1px solid var(--b1); border-radius: 12px; padding: 28px 22px; transition: all .25s; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(14,144,224,.1); }
+.card-icon { width: 50px; height: 50px; background: var(--b1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px; }
+.card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 19px; font-weight: 800; text-transform: uppercase; color: var(--dark); margin-bottom: 8px; }
+.card p { font-size: 14px; color: var(--g6); line-height: 1.7; }
 
 /* TEAM */
-.team-card{text-align:center}
-.team-img{width:130px;height:130px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 8px 24px rgba(14,144,224,.15);margin:0 auto 16px;display:block}
-.team-card h3{font-size:20px;font-weight:800;color:var(--dark);margin-bottom:4px}
-.team-card p{font-size:13px;color:var(--blue-600);font-weight:600}
+.team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.team-card { text-align: center; }
+.team-img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 6px 20px rgba(14,144,224,.15); margin: 0 auto 12px; display: block; }
+.team-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 800; text-transform: uppercase; color: var(--dark); margin-bottom: 3px; }
+.team-card p { font-size: 12px; color: var(--b6); font-weight: 600; }
 
 /* CTA */
-.cta-banner{background:linear-gradient(135deg,var(--blue-700) 0%,var(--blue-500) 60%,var(--sky) 100%);padding:80px 0}
-.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}
-.cta-inner h2{color:white;text-align:left;margin-bottom:8px}
-.cta-inner p{color:rgba(255,255,255,.8);font-size:17px}
+.cta { background: linear-gradient(135deg, #074C7E, var(--b5), var(--sky)); padding: 64px 24px; text-align: center; }
+.cta h2 { color: white; margin-bottom: 12px; }
+.cta p { color: rgba(255,255,255,.8); font-size: 16px; margin-bottom: 28px; }
 
 /* FOOTER */
-footer{background:var(--dark);padding:64px 0 32px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
-.footer-brand p{font-size:14px;color:var(--gray-400);line-height:1.7;margin-top:14px;max-width:280px}
-.footer-logo{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;text-transform:uppercase;color:white;text-decoration:none;display:flex;align-items:center;gap:10px}
-.footer-logo span{color:var(--sky)}
-.footer-logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--blue-500),var(--sky));border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px}
-.footer-col h4{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sky);margin-bottom:16px}
-.footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:10px}
-.footer-col ul a{font-size:14px;color:var(--gray-400);text-decoration:none}
-.footer-col ul a:hover{color:white}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-bottom p{font-size:13px;color:var(--gray-400)}
-.footer-license{color:var(--sky)!important;font-size:12px!important}
+footer { background: var(--dark); padding: 52px 24px 24px; }
+.footer-grid { display: grid; gap: 32px; margin-bottom: 36px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.footer-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 900; text-transform: uppercase; color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.footer-logo em { color: var(--sky); font-style: normal; }
+.footer-logo-mark { width: 28px; height: 28px; background: linear-gradient(135deg, var(--b5), var(--sky)); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+.footer-desc { font-size: 13px; color: var(--g4); line-height: 1.7; }
+.footer-col h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--sky); margin-bottom: 12px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 7px; }
+.footer-col ul a { font-size: 13px; color: var(--g4); text-decoration: none; }
+.footer-col ul a:hover { color: white; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.footer-bottom p { font-size: 12px; color: var(--g4); }
+.footer-emergency { color: var(--sky) !important; }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .nav-links,.nav-cta{display:none}
-  .hamburger{display:flex}
-  .grid-3,.grid-4{grid-template-columns:1fr 1fr}
-  .grid-2-1{grid-template-columns:1fr;gap:48px}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
-  .cta-inner{flex-direction:column;text-align:center}
-  .cta-inner h2{text-align:center}
+/* DESKTOP */
+@media (min-width: 900px) {
+  .nav-links, .nav-phone { display: flex; }
+  .hamburger { display: none; }
+  .section { padding: 88px 32px; }
+  .stats-band { padding: 56px 32px; }
+  .stats-grid { grid-template-columns: repeat(4, 1fr); max-width: 900px; }
+  .page-hero { padding: 80px 32px 64px; }
+  .about-story { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-img { height: 460px; margin-bottom: 0; }
+  .about-img-wrap { margin-bottom: 0; }
+  .about-badge { bottom: -16px; right: -16px; }
+  .team-grid { grid-template-columns: repeat(4, 1fr); }
+  .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; text-align: left; }
+  .cta-inner h2 { margin-bottom: 8px; }
+  .cta-inner p { margin-bottom: 0; }
+  footer { padding: 56px 32px 28px; }
 }
-@media(max-width:600px){
-  .nav-inner{padding:0 16px}
-  .grid-3,.grid-4{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .container{padding:0 20px}
-  .section{padding:64px 0}
-  .about-img-wrap img{height:300px}
+@media (max-width: 899px) {
+  .nav-links, .nav-phone { display: none; }
+  .hamburger { display: flex; }
 }
 </style>
 </head>
@@ -125,10 +138,7 @@ footer{background:var(--dark);padding:64px 0 32px}
 
 <nav>
   <div class="nav-inner">
-    <a class="logo" href="index.html">
-      <div class="logo-mark">⚡</div>
-      Spark<span>Pro</span>
-    </a>
+    <a class="logo" href="index.html"><div class="logo-mark">⚡</div>Spark<em>Pro</em></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About</a></li>
@@ -139,14 +149,14 @@ footer{background:var(--dark);padding:64px 0 32px}
       <li><a href="reviews.html">Reviews</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a class="nav-cta" href="contact.html">📞 (312) 555-0192</a>
+    <a class="nav-phone" href="contact.html">📞 (312) 555-0192</a>
     <button class="hamburger" id="menuBtn" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<div class="mobile-nav" id="mobileNav">
+<div class="mob-nav" id="mobileNav">
   <a href="index.html">Home</a>
   <a href="about.html" class="active">About</a>
   <a href="gallery.html">Gallery</a>
@@ -158,123 +168,108 @@ footer{background:var(--dark);padding:64px 0 32px}
 </div>
 
 <main>
-  <div class="page-hero">
-    <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a> / <span>About Us</span></div>
-      <h1>ABOUT<br><em>SPARKPRO</em></h1>
-      <p>Chicago's trusted electrician since 2007 — family owned, locally operated, community driven.</p>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> / <span>About Us</span></div>
+  <h1>ABOUT<br><em>SPARKPRO</em></h1>
+  <p>Chicago's trusted electrician since 2007 — family owned, locally operated, community driven.</p>
+</div>
+
+<!-- STORY -->
+<section class="section">
+  <div class="about-story">
+    <div class="about-img-wrap">
+      <img class="about-img" src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=700&q=80&auto=format&fit=crop" alt="SparkPro team">
+      <div class="about-badge"><strong>2007</strong><span>Est. Chicago, IL</span></div>
+    </div>
+    <div class="about-text">
+      <div class="badge">Our Story</div>
+      <h2>BUILT ON EXPERTISE,<em>DRIVEN BY INTEGRITY</em></h2>
+      <p>SparkPro Electric was founded in 2007 by Tom Kowalski, a second-generation electrician who grew up watching his father wire homes across the South Side. His belief was simple: Chicago families deserve honest pricing, clean work, and an electrician who actually shows up on time.</p>
+      <p>What began as a solo operation out of a single van has grown into a team of 14 licensed electricians covering the entire Chicagoland area — from the North Shore to Naperville.</p>
+      <ul class="about-list">
+        <li>Licensed, bonded & fully insured (License #EC-114892)</li>
+        <li>Free estimates with upfront, honest pricing</li>
+        <li>Written satisfaction guarantee on every job</li>
+        <li>Emergency service 24/7, including all holidays</li>
+        <li>Only code-compliant materials and methods used</li>
+        <li>Over 3,400 completed jobs across Chicagoland</li>
+      </ul>
+      <a class="btn-primary" href="contact.html">Get a Free Estimate</a>
     </div>
   </div>
+</section>
 
-  <section class="section">
-    <div class="container">
-      <div class="grid-2-1">
-        <div class="about-img-wrap">
-          <img src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=700&q=80&auto=format&fit=crop" alt="SparkPro team">
-          <div class="about-img-badge">
-            <strong>2007</strong>
-            <span>Est. Chicago, IL</span>
-          </div>
-        </div>
-        <div>
-          <div class="badge">Our Story</div>
-          <h2>BUILT ON EXPERTISE,<br><em>DRIVEN BY INTEGRITY</em></h2>
-          <p style="font-size:15px;color:var(--gray-600);line-height:1.8;margin-bottom:16px;">SparkPro Electric was founded in 2007 by Tom Kowalski, a second-generation electrician who grew up watching his father wire homes across the South Side. His belief was simple: Chicago families deserve honest pricing, clean work, and an electrician who actually shows up on time.</p>
-          <p style="font-size:15px;color:var(--gray-600);line-height:1.8;margin-bottom:24px;">What began as a solo operation out of a single van has grown into a team of 14 licensed electricians covering the entire Chicagoland area — from the North Shore to Naperville.</p>
-          <ul class="about-list">
-            <li>Licensed, bonded & fully insured (License #EC-114892)</li>
-            <li>Free estimates with upfront, honest pricing</li>
-            <li>Written satisfaction guarantee on every job</li>
-            <li>Emergency service 24/7, including all holidays</li>
-            <li>Only code-compliant materials and methods used</li>
-            <li>Over 3,400 completed jobs across Chicagoland</li>
-          </ul>
-          <a class="btn-primary" href="contact.html">Get a Free Estimate</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div style="background:linear-gradient(135deg,var(--blue-600),var(--blue-400));padding:56px 0;">
-    <div class="container">
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center;">
-        <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:white;line-height:1;">18+</div><div style="font-size:13px;color:rgba(255,255,255,.75);margin-top:4px;">Years in Chicago</div></div>
-        <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:white;line-height:1;">3,400+</div><div style="font-size:13px;color:rgba(255,255,255,.75);margin-top:4px;">Jobs Completed</div></div>
-        <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:white;line-height:1;">4.9★</div><div style="font-size:13px;color:rgba(255,255,255,.75);margin-top:4px;">Average Rating</div></div>
-        <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:white;line-height:1;">24/7</div><div style="font-size:13px;color:rgba(255,255,255,.75);margin-top:4px;">Always On Call</div></div>
-      </div>
-    </div>
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stats-grid">
+    <div><div class="stat-num">18+</div><div class="stat-label">Years in Chicago</div></div>
+    <div><div class="stat-num">3,400+</div><div class="stat-label">Jobs Completed</div></div>
+    <div><div class="stat-num">4.9★</div><div class="stat-label">Average Rating</div></div>
+    <div><div class="stat-num">24/7</div><div class="stat-label">Always On Call</div></div>
   </div>
+</div>
 
-  <section class="section section-light">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:60px;">
-        <div class="badge">Why Choose Us</div>
-        <h2>THE SPARKPRO<br><em>DIFFERENCE</em></h2>
-      </div>
-      <div class="grid-3">
-        <div class="service-card"><div class="service-icon">⚡</div><h3>Speed</h3><p>45-minute emergency response anywhere in Chicago. Electrical problems can't wait for business hours.</p></div>
-        <div class="service-card"><div class="service-icon">💰</div><h3>Honest Pricing</h3><p>Full price before we start. No hidden fees, no surprise charges when the job is complete. Period.</p></div>
-        <div class="service-card"><div class="service-icon">🛡️</div><h3>Fully Licensed</h3><p>City of Chicago licensed, bonded, and fully insured. You're completely protected on every job.</p></div>
-        <div class="service-card"><div class="service-icon">✅</div><h3>Guaranteed Work</h3><p>Every job backed by our written guarantee. If something isn't right, we return and fix it free.</p></div>
-        <div class="service-card"><div class="service-icon">🏙️</div><h3>Local Experts</h3><p>We know Chicago's building codes, permit processes, and older home wiring like no one else.</p></div>
-        <div class="service-card"><div class="service-icon">🧹</div><h3>Clean Job Sites</h3><p>We protect your floors, walls, and belongings. When we leave, your home is cleaner than we found it.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:60px;">
-        <div class="badge">The Team</div>
-        <h2>MEET OUR MASTER<br><em>ELECTRICIANS</em></h2>
-      </div>
-      <div class="grid-4">
-        <div class="team-card"><img class="team-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&q=80" alt="Tom Kowalski"><h3>Tom Kowalski</h3><p>Founder & Master Electrician</p></div>
-        <div class="team-card"><img class="team-img" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&q=80" alt="Marcus Webb"><h3>Marcus Webb</h3><p>Lead Electrician</p></div>
-        <div class="team-card"><img class="team-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&q=80" alt="Diego Santos"><h3>Diego Santos</h3><p>Panel & Commercial Specialist</p></div>
-        <div class="team-card"><img class="team-img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&q=80" alt="Ryan Foster"><h3>Ryan Foster</h3><p>Smart Home & EV Expert</p></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-banner">
-    <div class="container">
-      <div class="cta-inner">
-        <div><h2>READY TO WORK WITH THE BEST?</h2><p>Contact us today for a free, no-obligation estimate on any electrical job.</p></div>
-        <a class="btn-white" href="contact.html">Get a Free Estimate</a>
-      </div>
-    </div>
+<!-- VALUES -->
+<section class="section section-gray">
+  <div style="text-align:center;margin-bottom:48px;">
+    <div class="badge">Why Choose Us</div>
+    <h2>THE SPARKPRO<em>DIFFERENCE</em></h2>
   </div>
+  <div class="cards-grid">
+    <div class="card"><div class="card-icon">⚡</div><h3>Speed</h3><p>45-minute emergency response anywhere in Chicago. Electrical problems can't wait for business hours.</p></div>
+    <div class="card"><div class="card-icon">💰</div><h3>Honest Pricing</h3><p>Full price before we start. No hidden fees, no surprise charges when the job is complete.</p></div>
+    <div class="card"><div class="card-icon">🛡️</div><h3>Fully Licensed</h3><p>City of Chicago licensed, bonded, and fully insured. You're protected on every job we do.</p></div>
+    <div class="card"><div class="card-icon">✅</div><h3>Guaranteed Work</h3><p>Every job backed by our written guarantee. If something isn't right, we return and fix it free.</p></div>
+    <div class="card"><div class="card-icon">🏙️</div><h3>Local Experts</h3><p>We know Chicago's building codes, permit processes, and older home wiring like no one else.</p></div>
+    <div class="card"><div class="card-icon">🧹</div><h3>Clean Job Sites</h3><p>We protect your floors, walls, and belongings. Your home is cleaner when we leave than when we arrived.</p></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section">
+  <div style="text-align:center;margin-bottom:48px;">
+    <div class="badge">The Team</div>
+    <h2>MEET OUR MASTER<em>ELECTRICIANS</em></h2>
+  </div>
+  <div class="team-grid">
+    <div class="team-card"><img class="team-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&q=80" alt="Tom Kowalski"><h3>Tom Kowalski</h3><p>Founder & Master Electrician</p></div>
+    <div class="team-card"><img class="team-img" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&q=80" alt="Marcus Webb"><h3>Marcus Webb</h3><p>Lead Electrician</p></div>
+    <div class="team-card"><img class="team-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&q=80" alt="Diego Santos"><h3>Diego Santos</h3><p>Panel & Commercial Specialist</p></div>
+    <div class="team-card"><img class="team-img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&q=80" alt="Ryan Foster"><h3>Ryan Foster</h3><p>Smart Home & EV Expert</p></div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="cta-inner">
+    <div><h2>READY TO WORK WITH THE BEST?</h2><p>Contact us today for a free, no-obligation estimate on any electrical job.</p></div>
+    <a class="btn-white" href="contact.html">Get a Free Estimate</a>
+  </div>
+</div>
+
 </main>
 
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><a class="footer-logo" href="index.html"><div class="footer-logo-mark">⚡</div>Spark<span>Pro</span></a><p>Professional electrical services in Chicago, IL. Trusted by over 3,400 homeowners and businesses since 2007.</p></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="index.html">Emergency Electrical</a></li><li><a href="index.html">Panel Upgrades</a></li><li><a href="index.html">EV Charger Install</a></li><li><a href="index.html">Smart Home Wiring</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="contact.html">Contact</a></li><li><a href="shop.html">Shop</a></li></ul></div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 SparkPro Electric. All rights reserved. License #EC-114892 | Chicago, IL</p>
-      <p class="footer-license">⚡ 24/7 Emergency: (312) 555-0192</p>
-    </div>
+  <div class="footer-grid">
+    <div><a class="footer-logo" href="index.html"><div class="footer-logo-mark">⚡</div>Spark<em>Pro</em></a><p class="footer-desc">Professional electrical services in Chicago, IL. Trusted by over 3,400 homeowners and businesses since 2007.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="index.html">Emergency Electrical</a></li><li><a href="index.html">Panel Upgrades</a></li><li><a href="index.html">EV Charger Install</a></li><li><a href="index.html">Smart Home Wiring</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="contact.html">Contact</a></li><li><a href="shop.html">Shop</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 SparkPro Electric. All rights reserved. License #EC-114892 | Chicago, IL</p>
+    <p class="footer-emergency">⚡ 24/7 Emergency: (312) 555-0192</p>
   </div>
 </footer>
 
 <script>
 function toggleMenu() {
-  var nav = document.getElementById('mobileNav');
-  if (nav.classList.contains('open')) {
-    nav.classList.remove('open');
-  } else {
-    nav.classList.add('open');
-  }
+  var n = document.getElementById('mobileNav');
+  n.classList.contains('open') ? n.classList.remove('open') : n.classList.add('open');
 }
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.mobile-nav a').forEach(function(link) {
-    link.addEventListener('click', function() {
+  document.querySelectorAll('.mob-nav a').forEach(function(a) {
+    a.addEventListener('click', function() {
       document.getElementById('mobileNav').classList.remove('open');
     });
   });
