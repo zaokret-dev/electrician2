@@ -959,6 +959,48 @@ footer {
 main { animation: fadeUp .4s ease both; }
 
 </style>
+
+<style>
+@media (max-width: 600px) {
+  .blog-posts-grid { grid-template-columns: 1fr !important; }
+  .blog-posts-grid > div { grid-template-columns: 1fr !important; }
+  .blog-posts-grid > div img { width: 100% !important; height: 160px !important; }
+  .blog-hero-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<style>
+/* Mobile touch fixes */
+.hamburger {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  z-index: 200;
+  position: relative;
+}
+.nav-cta {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+nav {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+@media (max-width: 600px) {
+  .blog-posts-grid { grid-template-columns: 1fr !important; }
+  .blog-posts-grid > div { grid-template-columns: 1fr !important; }
+  .blog-posts-grid > div img { width: 100% !important; height: 180px !important; }
+}
+</style>
+
+<style>
+@media (max-width: 768px) {
+  .logo { font-size: 20px; }
+  .logo-mark { width: 28px; height: 28px; font-size: 14px; }
+  .nav-inner { padding: 0 16px; }
+  .hamburger { margin-left: auto; flex-shrink: 0; }
+}
+</style>
 </head>
 <body>
 <nav>
@@ -1003,7 +1045,7 @@ main { animation: fadeUp .4s ease both; }
       </div>
 
       <!-- More posts -->
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;" class="blog-posts-grid">
         <div style="display:grid;grid-template-columns:140px 1fr;border-radius:12px;overflow:hidden;border:1px solid var(--blue-100);background:white;transition:all .25s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(14,144,224,.12)'" onmouseout="this.style.boxShadow='none'">
           <img src="https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?w=300&q=80&auto=format&fit=crop" alt="EV" style="width:140px;height:100%;object-fit:cover;">
           <div style="padding:20px;"><span class="blog-tag">EV Charging</span><h3 style="font-size:18px;font-weight:800;color:var(--dark);margin-bottom:8px;line-height:1.2;">Level 1 vs Level 2 Home Charger: Which Is Right?</h3><p style="font-size:12px;color:var(--gray-600);line-height:1.6;margin-bottom:12px;">Not all home EV chargers are equal. Here's the honest breakdown.</p><div class="blog-meta"><span>📅 Feb 14, 2025</span><span>⏱ 4 min</span></div></div>
